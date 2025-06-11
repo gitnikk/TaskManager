@@ -1,39 +1,41 @@
-# TaskManager
+# 📝 Task Manager App (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+A simple Task Manager web application built with Angular. This project is designed to help you practice core Angular concepts typically assessed in technical interviews.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🚀 Features
 
-## Running unit tests
+- ✅ Create, update, and delete tasks
+- ✅ View individual task details
+- ✅ Filter tasks by completion status (All / Completed / Pending)
+- ✅ Mark tasks as completed
+- ✅ Form validation with Angular Reactive Forms
+- ✅ Route-based navigation
+- ✅ LocalStorage support for persistent tasks
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-🚀 Angular Coding Practice Task: Task Manager App
-Objective:
-Build a mini "Task Manager" application where users can create, view, edit, delete, and filter their tasks.
+## 🧱 Components
 
-🧱 Requirements
-1. Pages/Components
-HomeComponent
+### 1. `HomeComponent`
+- Displays all tasks
+- Filtering options (All, Completed, Pending)
+- Buttons to edit, delete, or complete a task
 
-Display a list of all tasks
+### 2. `TaskFormComponent`
+- Reusable for both creating and editing a task
+- Built with Angular Reactive Forms
+- Validations for `title` and `dueDate`
 
-Filter: Show All, Completed, Pending
+### 3. `TaskDetailComponent`
+- Displays the complete information of a task using route params
 
-TaskFormComponent
+---
 
-For creating/editing a task using Angular Reactive Forms
+## 📦 Data Model
 
-TaskDetailComponent
-
-View full details of a single task
-
-2. Task Model
-ts
-Copy
-Edit
+```ts
 export interface Task {
   id: number;
   title: string;
@@ -41,53 +43,66 @@ export interface Task {
   dueDate: string;
   isCompleted: boolean;
 }
-3. Features to Implement
-✅ Create a new task
+```
+---
 
-✅ Edit a task
+## 🧠 Concepts Practiced
+- ✅ Components & Lifecycle Hooks
+- ✅ Routing & Route Parameters
+- ✅ Reactive Forms & Form Validation
+- ✅ Services & Dependency Injection
+- ✅ State Management using RxJS BehaviorSubject
+- ✅ LocalStorage for data persistence
+- ✅ Angular Pipes & Directives (*ngIf, *ngFor, etc.)
+- ✅ Modular Architecture
 
-✅ Delete a task
+----
 
-✅ Mark task as completed
+## 🌐 Bonus Features (Optional)
+- 🧪 Unit tests for services or components
+- 🧠 Dirty form guard using CanDeactivate
+- 📱 Responsive design using Angular Material or TailwindCSS
+- 🧩 ChangeDetectionStrategy.OnPush for performance
 
-✅ Filter tasks by completion status
+---
 
-✅ View task details using route parameter (e.g., /task/3)
+## 📁 Folder Structure (Suggested)
 
-✅ Form validation (title and due date are required)
+```ts
+src/
+│
+├── app/
+│   ├── components/
+│   │   ├── home/
+│   │   ├── task-form/
+│   │   └── task-detail/
+│   ├── services/
+│   ├── models/
+│   ├── guards/
+│   └── app-routing.module.ts
+│
+├── assets/
+└── environments/
 
-🌐 Bonus Points
-🧪 Write basic unit tests for a service or component
+```
 
-💾 Use localStorage to persist tasks
+## 🧠 Getting Started
 
-📦 Use RxJS BehaviorSubject in a service for state management
+# Clone the repo
+git clone https://github.com/your-username/task-manager-angular.git
 
-🌍 Add a simple route guard to block navigation if the form is dirty
+# Navigate into the project directory
+cd task-manager-angular
 
-📱 Make it mobile responsive using Angular Material or TailwindCSS
+# Install dependencies
+npm install
 
-🧰 Tools/Modules You Should Use
-@angular/forms (ReactiveFormsModule)
+# Run the development server
+ng serve
 
-@angular/router
 
-HttpClientModule (mock API or use local storage)
 
-Optionally Angular Material for UI
+---
 
-🧠 Skill Areas Tested
-Component interaction
-
-Routing & route params
-
-Forms & validation
-
-Service and state management
-
-Conditional rendering (ngIf, ngFor, etc.)
-
-CRUD operations
-
-Performance with change detection (OnPush if you want to go advanced)
-
+## 🙋‍♂️ Maintained By
+Nikhil — aspiring Project Manager, Software Developer, and future entrepreneur 🚀
